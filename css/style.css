@@ -9,7 +9,7 @@
 
 body {
     font-family: 'Tajawal', sans-serif;
-    background: linear-gradient(135deg, #2D3436, #6C5CE7);
+    background: linear-gradient(90deg, #01181f, #3f0435 ,rgb(1, 73, 97));
     min-height: 100vh;
     color: var(--light-color);
     padding: 20px;
