@@ -215,3 +215,21 @@ document.addEventListener('DOMContentLoaded', () => {
   getReciters();
 });
 
+let repeatCounter = 0;
+let repeatLimit = 1;
+
+audioPlayer.addEventListener('ended', () => {
+  repeatLimit = parseInt(document.getElementById('repeatCount').value) || 1;
+  if (repeatCounter < repeatLimit - 1) {
+    repeatCounter++;
+    audioPlayer.currentTime = 0;
+    audioPlayer.play();
+  } else {
+    repeatCounter = 0; // إعادة العداد
+    pauseAudio();
+  }
+});
+
+chooseSurah.addEventListener('change', () => {
+  repeatCounter = 0; // إعادة التكرار عند تغيير السورة
+});
